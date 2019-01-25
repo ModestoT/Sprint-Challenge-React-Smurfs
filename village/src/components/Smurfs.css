@@ -3,6 +3,12 @@
     margin: 0 auto;
 }
 
+.Smurfs a {
+    width: 30%;
+    margin: 2%;
+    text-decoration: none;
+    color: black;
+}
 .Smurfs ul {
     width: 100%;
     padding: 0;

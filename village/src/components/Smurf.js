@@ -5,9 +5,9 @@ import './Smurf.css';
 const Smurf = props => {
   return (
     <div className="Smurf">
-      <h3>{props.isUpdating ? props.smurf.name : props.name}</h3>
-      <strong>{props.isUpdating ? props.smurf.height : props.height} tall</strong>
-      <p>{props.isUpdating ? props.smurf.age : props.age} smurf years old</p>
+      <h3>{ props.smurf.name}</h3>
+      <strong>{ props.smurf.height} tall</strong>
+      <p>{props.smurf.age} smurf years old</p>
       <form >
         <button className= "delete" onClick={e => props.deleteSmurf(e, props.id)}>Delete</button>
         <button onClick={e => props.populateUpdate(e, props.id)}>Update</button>
