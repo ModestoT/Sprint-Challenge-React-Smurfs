@@ -1,13 +1,15 @@
 import React from 'react';
+import { Route } from 'react-router-dom';
 
 const Smurf = props => {
   return (
     <div className="Smurf">
-      <h3>{props.name}</h3>
-      <strong>{props.height} tall</strong>
-      <p>{props.age} smurf years old</p>
-      <form onSubmit={(e) => props.deleteSmurf(e, props.id)}>
-        <button>Delete</button>
+      <h3>{props.isUpdating ? props.smurf.name : props.name}</h3>
+      <strong>{props.isUpdating ? props.smurf.height : props.height} tall</strong>
+      <p>{props.isUpdating ? props.smurf.age : props.age} smurf years old</p>
+      <form >
+        <button onClick={e => props.deleteSmurf(e, props.id)}>Delete</button>
+        <button onClick={e => props.populateUpdate(e, props.id)}>Update</button>
       </form>
     </div>
   );
