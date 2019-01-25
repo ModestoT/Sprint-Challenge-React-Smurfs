@@ -9,8 +9,8 @@ const Smurf = props => {
       <strong>{ props.smurf.height} tall</strong>
       <p>{props.smurf.age} smurf years old</p>
       <form >
-        <button className= "delete" onClick={e => props.deleteSmurf(e, props.id)}>Delete</button>
-        <button onClick={e => props.populateUpdate(e, props.id)}>Update</button>
+        <button className= "delete" onClick={e => props.deleteSmurf(e, props.smurf.id)}>Delete</button>
+        <button onClick={e => props.populateUpdate(e, props.smurf.id)}>Update</button>
       </form>
     </div>
   );
