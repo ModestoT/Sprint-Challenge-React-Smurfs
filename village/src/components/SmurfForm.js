@@ -55,6 +55,7 @@ class SmurfForm extends Component {
   render() {
     return (
       <div className="SmurfForm">
+        <h1>{this.props.isUpdating ? "Update Smurf" : "Add to the village"}</h1>
         <form onSubmit={this.handleSumbit}>
           <input
             onChange={this.handleInputChange}

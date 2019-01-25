@@ -66,7 +66,14 @@ class App extends Component {
     axios 
       .put(`http://localhost:3333/smurfs/${id}`, smurf)
       .then(res => { 
-        this.setState({ smurfs: res.data, isUpdating:false});
+        this.setState({ 
+          smurfs: res.data, 
+          isUpdating:false,
+          smurf: {
+            name: '',
+            age: '',
+            height: ''
+          } });
         this.props.history.push('/')
       })
       .catch(err => console.log(err))
@@ -90,7 +97,7 @@ class App extends Component {
         <nav>
           <h1>Smurf List</h1>
           <div className="links">
-            <NavLink to ="/smurf-form">Add Smurf</NavLink>
+            <NavLink to ="/smurf-form">{this.state.isUpdating ? "Update Smurf" : "Add Smurf"}</NavLink>
             <NavLink exact to ="/">Home</NavLink>
           </div>
         </nav>
