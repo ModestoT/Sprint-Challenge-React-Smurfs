@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Smurf from './Smurf';
+import './SingleSmurf.css';
 
 function SinglePost (props) {
     const smurf = props.smurfs.find(
@@ -9,7 +10,9 @@ function SinglePost (props) {
     
     if(!smurf) return <h2>Opps!</h2>;
     return (
-        <Smurf smurf={smurf}/>
+        <div className="selected-smurf">
+            <Smurf smurf={smurf}/>
+        </div>
     );
 }
 

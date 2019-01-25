@@ -1,0 +1,13 @@
+.selected-smurf {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
+}
+
+.selected-smurf .Smurf {
+    width: 20%;
+    border: none;
+    font-size: 2rem;
+}
