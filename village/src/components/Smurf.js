@@ -1,5 +1,6 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+
+import './Smurf.css';
 
 const Smurf = props => {
   return (
@@ -8,7 +9,7 @@ const Smurf = props => {
       <strong>{props.isUpdating ? props.smurf.height : props.height} tall</strong>
       <p>{props.isUpdating ? props.smurf.age : props.age} smurf years old</p>
       <form >
-        <button onClick={e => props.deleteSmurf(e, props.id)}>Delete</button>
+        <button className= "delete" onClick={e => props.deleteSmurf(e, props.id)}>Delete</button>
         <button onClick={e => props.populateUpdate(e, props.id)}>Update</button>
       </form>
     </div>

@@ -29,6 +29,7 @@ class SmurfForm extends Component {
       }
     });
   };
+  
   handleSumbit = e => {
     e.preventDefault();
 
