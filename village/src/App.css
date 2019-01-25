@@ -21,6 +21,6 @@ nav h1 {
   margin-right: 1%;
 }
 
-.active {
+.links a.active {
   border-bottom: 1px solid blue;
 }

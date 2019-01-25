@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './SmurfForm.css';
+
 class SmurfForm extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +31,7 @@ class SmurfForm extends Component {
       }
     });
   };
-  
+
   handleSumbit = e => {
     e.preventDefault();
 
