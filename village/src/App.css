@@ -1,3 +1,26 @@
 .App {
   text-align: center;
 }
+nav {
+  background: lightblue;
+  padding: 1%;
+}
+
+nav h1 {
+  font-size: 3rem;
+  width: 99%;
+}
+
+.links {
+  font-size: 1.4rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: black;
+  margin-right: 1%;
+}
+
+.links a.active {
+  border-bottom: 1px solid blue;
+}

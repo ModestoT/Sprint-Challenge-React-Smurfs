@@ -1,0 +1,25 @@
+.Smurf {
+    border: 1px solid darkgrey;
+    padding: 2%;
+    background: lightblue;
+    border-radius: 4px;
+    -webkit-box-shadow: 5px 10px 8px #888888;
+    box-shadow: 5px 10px 8px #888888;
+}
+
+.Smurf button {
+    border: none;
+    border-radius: 3px;
+    padding: 1% 6%;
+    margin: 1% 3%;
+    cursor: pointer;
+}
+
+.Smurf button:hover {
+    transform: scale(1.2);
+}
+
+.delete {
+    background: red;
+    color: white;
+}
