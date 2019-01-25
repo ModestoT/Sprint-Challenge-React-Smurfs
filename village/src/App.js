@@ -10,7 +10,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      smurfs: [],
+      smurfs: []
     };
   }
 
@@ -19,6 +19,20 @@ class App extends Component {
       .get('http://localhost:3333/smurfs')
       .then(res => {
         this.setState({ smurfs: res.data});
+      })
+      .catch(err => console.log(err.response));
+  }
+
+  createSmurf = (name,age,height) => {
+    const newSmurf = {name, age, height};
+
+    axios
+      .post('http://localhost:3333/smurfs', newSmurf)
+      .then(res => {
+        this.setState({
+          smurfs: res.data
+        });
+        this.props.history.push('/');
       })
       .catch(err => console.log(err.response));
   }
@@ -36,7 +50,7 @@ class App extends Component {
           </div>
         </nav>
         <Route exact path = "/" render={props => <Smurfs {...props} smurfs={this.state.smurfs} />} />
-        <Route path ="/smurf-form" component={SmurfForm} />
+        <Route path ="/smurf-form" render={props => <SmurfForm {...props} createSmurf={this.createSmurf}/>} />
       </div>
     );
   }
